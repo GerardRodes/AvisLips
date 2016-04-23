@@ -1,7 +1,7 @@
 # AvisLips
 ####jQuery music player
 
-Loads every item with the class **.al-item**.
+Loads every item with the class **.al-item** within an element selected by jQuery.
 
 Inside it must be the **audio tag** and the desired **elements**.
 
