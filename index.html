@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+	<style type="text/css" media="screen">
+		.playButton,
+		.loop,
+		.mute {position: relative;display: inline-block;font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;cursor: pointer;text-shadow: 0px 0px 4px black;transition: all .2s ease-out}
+
+		.playButton {font-size: 3rem;border: 5px solid;border-radius: 50%;padding: 5px;width: 50px;height: 50px;box-shadow: inset 0px 0px 4px black,0px 0px 4px black;transition: all .2s ease-out}
+		.playButton:before {content: "\e072";position: absolute;left: 7px;top: 4px;}
+		.pause:before {content: "\e073";}
+
+		.loop {font-size: 24px;}
+		.loop:before {content: "\e115";}
+
+		.mute {font-size: 24px;}
+		.mute:before {content: "\e036";}
+
+		.timeline {width: 100%;height: 5px;background-color: #333;position: relative;}
+		.timeline .current {position: absolute; width: 100%;height: 100%;left: 0px;top: 0px;background-color: #FF8300;content: "";max-width: 100%;}
+
+		.volume {width: 100%;height: 5px;background-color: #333;position: relative;}
+		.volume .current {position: absolute; width: 100%;height: 100%;left: 0px;top: 0px;background-color: #FF8300;content: "";max-width: 100%;}
+
+
+		progress[value] {-webkit-appearance: none;appearance: none;cursor: pointer;}
+		progress[value]::-webkit-progress-bar {background-color: #333;}
+		progress[value]::-webkit-progress-value {background-color: #FF8300;transition: all .5s linear}
+
+
+
+		.active{color: #FF8300;}
+
+		.al-item {display: inline-block;min-width: 100px;border:1px solid black;margin: 1rem;padding: 10px;}
+		.Yo-no-soy-un-audio {width: 0px;height: 0px;}
+	</style>
+
+</head>
+<body>
+	<div id="main-wrapper">
+
+		<div class="al-item">
+			<audio>
+		    	<source src="song.mp3" type="audio/mpeg">
+			</audio>
+			<div class="playButton"></div>
+			<div class="currentTime"></div>
+			<div class="duration"></div>
+			<div class="currentSrc"></div>
+			<div class="loop"></div>
+			<div class="mute"></div>
+			<div class="timeline"></div><br/>
+			<div class="volume"></div>
+		</div>
+
+		<div class="al-item">
+			<audio>
+		    	<source src="song2.mp3" type="audio/mpeg">
+			</audio>
+			<div class="playButton"></div>
+		</div>
+
+		<div class="al-item">
+			<audio>
+		    	<source src="song3.mp3" type="audio/mpeg">
+			</audio>
+			<div class="playButton"></div>
+			<div class="currentTime"></div>
+			<div class="duration"></div>
+			<div class="currentSrc"></div>
+			<div class="loop"></div>
+			<div class="timeline"></div>
+		</div>
+
+		<div class="Yo-no-soy-un-audio"></div>
+
+	</div>
+
+	
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="AvisLips.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#main-wrapper').avisLips({
+				playButton: true,
+			});
+		})
+	</script>
+</body>
+</html>
