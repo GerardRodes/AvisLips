@@ -1,9 +1,9 @@
 # AvisLips
-jQuery music player
+####jQuery music player
 
-Loads every item with the class .al-item
+Loads every item with the class **.al-item**.
 
-Inside it must be the audio tag and the desired elements
+Inside it must be the **audio tag** and the desired **elements**.
 
 ##Elements
   - **playButton**: play/pause button
