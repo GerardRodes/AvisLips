@@ -4,7 +4,7 @@
 
 		/*
 			METHODS CONTROLLERS	CLASSES
-			Insert div with the following classe into an al-item to create controlls
+			Insert a div with the following classes into an al-item to create controls
 			-------------------------------------------------------------------------
 			playButton
 			loop
